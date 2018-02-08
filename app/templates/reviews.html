@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block body %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                    <div class="registrar-list" style="background-color:#02c54c;">
+                        <div class="reviews-image">
+                            <a href="#"><img src="{{ url_for('static',filename='imags/registrars/godaddy_review.png') }}" class="img-responsive" alt="godaddy review"/></a>
+                        </div>
+                        <p class="registrar-link"><a href="{{ url_for('registrar.review_registrar',name='godaddy')}}">GoDaddy</a></p>
+                    </div>
+
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                    <div class="registrar-list" style="background-color:#8cc1c1;">
+                        <div class="reviews-image">
+                            <a href="#"><img src="{{ url_for('static',filename='imags/registrars/namecheap_review.png') }}" class="img-responsive" alt="namecheap review"/></a>
+                        </div>
+                            <p class="registrar-link"><a href="{{ url_for('registrar.review_registrar',name='namecheap')}}">NameCheap</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                    <div class="registrar-list" style="background-color: #7ed6df;">
+                        <div class="reviews-image">
+                            <img src="{{ url_for('static',filename='imags/registrars/godaddy_review.png') }}" class="img-responsive" alt="Namesilo review"/>
+                        </div>
+                        <p class="registrar-link"><a href="{{ url_for('registrar.review_registrar',name='namesilo') }}">Namesilo</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                    <div class="registrar-list" style="background-color:#8cc1c1;">
+                        <div class="reviews-image">
+                            <img src="{{ url_for('static',filename='imags/registrars/namecheap_review.png') }}" class="img-responsive" alt="namecheap review"/>
+                        </div>
+                            <p class="registrar-link"><a href="{{ url_for('registrar.review_registrar',name='namecheap')}}">NameCheap</a></p>
+                    </div>
+                </div>
+                    </div>
+                <div class="row">
+
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                    <div class="registrar-list" style="background-color:#8cc1c1;">
+                        <div class="reviews-image">
+                            <img src="{{ url_for('static',filename='imags/registrars/namecheap_review.png') }}" class="img-responsive" alt="namecheap review"/>
+                        </div>
+                            <p class="registrar-link"><a href="{{ url_for('registrar.review_registrar',name='namecheap')}}">NameCheap</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                    <div class="registrar-list" style="background-color:#8cc1c1;">
+                        <div class="reviews-image">
+                            <img src="{{ url_for('static',filename='imags/registrars/namecheap_review.png') }}" class="img-responsive" alt="namecheap review"/>
+                        </div>
+                            <p class="registrar-link"><a href="{{ url_for('registrar.review_registrar',name='namecheap')}}">NameCheap</a></p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

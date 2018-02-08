@@ -53,6 +53,55 @@
     font-size: 1.4em;
 }
 
+.registrar-list {
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.reviews-image {
+    padding: 12px 0;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.registrar-link {
+    padding:20px 0;
+    margin: 0 auto;
+    text-size: 18px;
+    text-align: center;
+
+}
+
+
+.registrar-list a:link, a:visited,a:active {
+    text-decoration: none;
+    color: #f7f7f7;
+}
+
+.price-table {
+    border: none;
+    font-size: 18px;
+}
+
+.price-thead .price-th {
+    font-size: 20px;
+    font-width: 500;
+    color: #10ac84;
+    line-height: 1.5em;
+    border: none;
+    text-align:center;
+}
+
+.price-td {
+    border: none;
+    border-bottom-color: #02c54c;
+}
+
+.table-bordered > tbody > tr > td, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > td, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > thead > tr > th {
+    border: none;
+    border-bottom: 2px solid #8c8c8c;
+}
+
 .copy-right-note {
     border-top: 1px solid #c8d6e5;
     padding: 20px;

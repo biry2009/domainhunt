@@ -2,8 +2,13 @@ from flask import redirect, abort, render_template
 from . import registrar
 from app.models import Registrar
 
+@registrar.route('/reviews/')
+def reviews():
+    title = 'Domain Registrars Reviews'
+    return render_template("reviews.html", title=title)
+
 # registrar route
-@registrar.route('/reviews/<name>')
+@registrar.route('/review/<name>')
 def review_registrar(name):
     regist = Registrar.query.filter_by(key=name).first()
     if regist is None:
@@ -26,7 +31,6 @@ def link(name):
     namecheap_url = 'https://www.namecheap.com'
     onedomain_url = 'https://www.1and1.com'
     name_url = 'https://www.name.com'
-
 
     if registrar_name is None:
         abort(404)
