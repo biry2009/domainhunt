@@ -25,20 +25,21 @@
               <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                   <thead>
                   <tr>
-                      <th>Name</th>
-                      <th>Email</th>
-                      <th>Password</th>
+                      <th>Domain</th>
+                      <th>Register</th>
+                      <th>Renewal</th>
+                      <th>Transfer</th>
                   </tr>
                   </thead>
                   <tbody>
-                  {% for i in range(0,1500) %}
+                  {% for cheap in cheap_prices %}
                       <tr>
-                          <td>{{ users[i].username }}</td>
-                          <td>{{ users[i].email }}</td>
-                          <td>{{ users[i].password }}</td>
+                      <td>{{cheap.extension}}</td>
+                      <td>{{cheap.reg_registrar }} - {{ cheap.reg_price }}</td>
+                      <td>{{cheap.renew_registrar }} - {{ cheap.renew_price }}</td>
+                      <td>{{cheap.tran_registrar }} - {{ cheap.tran_price }}</td>
                       </tr>
                   {% endfor %}
-
                   </tbody>
               </table>
           </div>

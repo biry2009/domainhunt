@@ -5,6 +5,7 @@ from config import config
 from flask import Blueprint
 
 main = Blueprint('main', __name__)
+registrar = Blueprint('registrar', __name__)
 
 moment = Moment()
 db = SQLAlchemy()
@@ -20,5 +21,7 @@ def create_app(config_name):
     from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)
 
-    # 附加路由和自定义的错误页面
+    from .registrar import registrar as registrar_blueprint
+    app.register_blueprint(registrar_blueprint)
+
     return app

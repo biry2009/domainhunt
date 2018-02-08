@@ -57,6 +57,42 @@ class Price(db.Model):
     registrar_id = db.Column(db.Integer, db.ForeignKey('registrars.id'))
 
 
+class Cheapest(db.Model):
+    __tablename__ = 'cheapest'
+    id = db.Column(db.Integer, primary_key=True)
+    extension = db.Column(db.String(20))
+    reg_registrar = db.Column(db.String(20))
+    reg_price = db.Column(db.Float)
+    renew_registrar = db.Column(db.String(20))
+    renew_price = db.Column(db.Float)
+    tran_registrar = db.Column(db.String(20))
+    tran_price = db.Column(db.Float)
+    popularity = db.Column(db.Integer)
+
+
+    @staticmethod
+    def generate_fake(count=100):
+        from sqlalchemy.exc import IntegrityError
+        from random import seed
+        import forgery_py
+        seed()
+
+        for i in range(count):
+            u = Cheapest(extension=forgery_py.lorem_ipsum.word(),
+                         reg_registrar=forgery_py.lorem_ipsum.word(),
+                         reg_price=float(forgery_py.monetary.formatted_money()),
+                         renew_registrar=forgery_py.lorem_ipsum.word(),
+                         renew_price=float(forgery_py.monetary.formatted_money()),
+                         tran_registrar=forgery_py.lorem_ipsum.word(),
+                         tran_price=float(forgery_py.monetary.formatted_money()),
+                         popularity=int(forgery_py.basic.number())
+            )
+
+            db.session.add(u)
+            try:
+                db.session.commit()
+            except IntegrityError:
+                db.session.rollback()
 
 
 class User(db.Model):

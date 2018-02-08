@@ -31,20 +31,13 @@
                 {% for ob in objk %}
                 <tr>
                     <td>{{ ob.registrar }}</td>
-                    <td>{{ ob.register }}</td>
-                    <td>{{ ob.renewal }}</td>
-                    <td>{{ ob.transfer }}</td>
-                    <td>{{ ob.whois }}</td>
+                    <td>${{ ob.register }}</td>
+                    <td>${{ ob.renewal }}</td>
+                    <td>${{ ob.transfer }}</td>
+                    <td>${{ ob.whois }}</td>
                 </tr>
                 {% endfor %}
                 {% endif %}
-                <tr>
-                    <td>Tiger Nixon</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>61</td>
-                    <td>2011/04/25</td>
-                </tr>
                 </tbody>
             </table>
 
