@@ -42,6 +42,7 @@
   padding: 9px 10px !important;
 }
 
+
 .search-tip {
     padding-top: 10px;
 }
@@ -54,7 +55,7 @@
 }
 
 .registrar-list {
-    margin-bottom: 10px;
+    margin-bottom: 26px;
     border-radius: 8px;
 }
 
@@ -67,7 +68,7 @@
 .registrar-link {
     padding:20px 0;
     margin: 0 auto;
-    text-size: 18px;
+    font-size: 18px;
     text-align: center;
 
 }
@@ -81,28 +82,39 @@
 .price-table {
     border: none;
     font-size: 18px;
+
 }
 
 .price-thead .price-th {
     font-size: 20px;
-    font-width: 500;
-    color: #10ac84;
+    font-weight: 500;
+    color: #fff;
     line-height: 1.5em;
     border: none;
     text-align:center;
+    background-color: #10ac84;
+
 }
 
 .price-td {
     border: none;
-    border-bottom-color: #02c54c;
+    border-bottom-color: #fff;
 }
 
-.table-bordered > tbody > tr > td, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > td, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > thead > tr > th {
-    border: none;
-    border-bottom: 2px solid #8c8c8c;
+table.dataTable tbody tr {
+    min-height: 48px;
 }
 
+table.dataTable tbody th, table.dataTable tbody td {
+    padding: 20px 10px;
+}
 
+.table-logo {
+    width: 26px;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 3px;
+}
 .copy-right-note {
     border-top: 1px solid #c8d6e5;
     padding: 20px;
@@ -137,6 +149,26 @@
 .footer-menu-list a:link, a:visited,a:active {
     text-decoration: none;
     color: #fff;
+}
+
+.breadcrumb {
+    display: block;
+    background-color: #fff;
+}
+
+.breadcrumb > li {
+    color: #8c8c8c;
+}
+
+
+.breadcrumb a:link, a:visited, a:active {
+    color: #1dd1a1;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: none;
+    color: #10ac84;
 }
 
 

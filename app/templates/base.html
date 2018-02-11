@@ -48,7 +48,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="{{ url_for('main.home_page') }}">Home</a></li>
-                <li><a href="{{ url_for('main.review_page') }}">Review</a></li>
+                <li><a href="{{ url_for('registrar.reviews') }}">Reviews</a></li>
                 <li><a href="{{ url_for('main.contact_page') }}">Contact</a></li>
                 <li><a href="{{ url_for('main.about_page') }}">About</a></li>
             </ul>
@@ -59,7 +59,9 @@
 
 <div class="container-fluid">
     <div class="row">
-
+      <div class="col-lg-10 col-lg-offset-1">
+          {% block breadcrumb %}{% endblock %}
+      </div>
     </div>
 </div>
 

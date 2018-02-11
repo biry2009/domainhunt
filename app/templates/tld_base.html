@@ -1,13 +1,19 @@
 {% extends "base.html" %}
+
+{% block breadcrumb %}
+    <ol class="breadcrumb">
+        <li><a href="#"><span class="icon icon-home"> </span></a></li>
+        <li><a href="#"><span class="icon icon-beaker"> </span> Projects</a></li>
+        <li><a href="#"><span class="icon icon-double-angle-right"></span> Breadcrumb</a></li>
+        <li><a href="#"><span class="icon icon-rocket"> </span> Getting started</a></li>
+        <li><a href="#"><span class="icon icon-arrow-down"> </span> Download</a></li>
+    </ol>
+{% endblock %}
+
 {% block body %}
     <div class="container-fluid">
     <div class="row">
         <div class="col-lg-10 col-lg-offset-1">
-            <ol class="breadcrumb">
-                <li><a href="/tlds-list">TLDs List</a></li>
-                <li class="active">{{ domain.name }}</li>
-            </ol>
-
             <h1><span class="label label-success">{{ domain.name }}</span></h1>
             <h3>Related domains:
                 <span class="label label-warning">.net</span>
@@ -30,7 +36,7 @@
                 {% if objk %}
                 {% for ob in objk %}
                 <tr>
-                    <td>{{ ob.registrar }}</td>
+                    <td>{{ ob.registrar}}<a href="#"><img src="{{ url_for('static', filename='imags/registrars/'+ ob.logo_path) }}" class="table-logo" alt=""/></a></td>
                     <td>${{ ob.register }}</td>
                     <td>${{ ob.renewal }}</td>
                     <td>${{ ob.transfer }}</td>

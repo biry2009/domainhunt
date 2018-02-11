@@ -16,12 +16,6 @@ def about_page():
     return render_template("about.html", title=title)
 
 
-@main.route('/review')
-def review_page():
-    title = "review"
-    return render_template("review.html", title=title)
-
-
 # contact page route
 @main.route('/contact')
 def contact_page():
@@ -41,9 +35,12 @@ def domain_extension(name):
     objk =[]
 
     for price in prices:
-        registrar_name = Registrar.query.filter_by(id=price.registrar_id).first().name
+        query_registrar = Registrar.query.filter_by(id=price.registrar_id).first()
+        registrar_name = query_registrar.name
+        registrar_key = query_registrar.key
         obj = [{
             'registrar': registrar_name,
+            'logo_path': str(registrar_key)+'_logo.png',
             'register': price.register,
             'renewal': price.renewal,
             'transfer': price.transfer,
